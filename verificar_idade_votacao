@@ -1,0 +1,28 @@
+# IDENTIFICAR SE A PESSOA PODE VOTAR COM BASE NA SUA DATA DE NASCIMENTO
+
+import datetime
+
+# Função para verificar se a pessoa pode votar este ano
+def verificar_pode_votar(ano_nascimento, ano_atual):
+    idade = ano_atual - ano_nascimento
+    if idade >= 16:
+        return True
+    else:
+        return False
+
+# Função principal
+def main():
+    ano_atual = datetime.datetime.now().year
+    ano_nascimento = int(input("Digite o ano de nascimento: "))
+    idade_atual = ano_atual - ano_nascimento
+
+    print(f"Sua idade atual é: {idade_atual} anos.")
+
+    if idade_atual >= 16:
+        print("Você pode votar este ano!")
+    else:
+        print("Você não pode votar este ano. A idade mínima para votar é de 16 anos.")
+
+# Chamada para a função principal
+if __name__ == "__main__":
+    main()
