@@ -1,0 +1,18 @@
+# CALCULAR VALOR DIFERENTE PARA COMPRAS DE MAÇÃS ACIMA DE 12 UNIDADES
+
+# Função para calcular o valor total da compra de maçãs
+def calcular_valor(numero_macas):
+    preco_unitario = 0.30  # Preço por maçã se menos do que uma dúzia
+    if numero_macas >= 12:
+        preco_unitario = 0.25  # Preço por maçã se pelo menos uma dúzia
+    return numero_macas * preco_unitario
+
+# Função principal
+def main():
+    numero_macas = int(input("Digite o número de maçãs compradas: "))
+    valor_total = calcular_valor(numero_macas)
+    print(f"O valor total da compra é: R$ {valor_total:.2f}")
+
+# Chamada para a função principal
+if __name__ == "__main__":
+    main()
