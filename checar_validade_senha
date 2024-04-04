@@ -1,0 +1,32 @@
+# CHECAR VALIDADE DA SENHA
+
+# Função para verificar a validade da senha
+def verificar_senha(senha):
+    senha_valida = "1234"
+    if senha == senha_valida:
+        return True
+    else:
+        return False
+
+# Função principal
+def main():
+    tentativas = 0
+    max_tentativas = 3
+
+    while tentativas < max_tentativas:
+        senha = input("Digite a senha: ")
+
+        if verificar_senha(senha):
+            print("ACESSO PERMITIDO")
+            break
+        else:
+            tentativas += 1
+            if tentativas < max_tentativas:
+                print("Senha incorreta. Tente novamente.")
+            else:
+                print("Limite de tentativas excedido. Acesso negado.")
+                break
+
+# Chamada para a função principal
+if __name__ == "__main__":
+    main()
