@@ -1,0 +1,26 @@
+# CALCULAR O PESO IDEAL DE UMA PESSOA
+
+# Função para calcular o peso ideal
+def calcular_peso_ideal(altura, sexo):
+    if sexo == 1:  # Feminino
+        peso_ideal = (62.1 * altura) - 44.7
+    elif sexo == 2:  # Masculino
+        peso_ideal = (72.7 * altura) - 58
+    else:
+        peso_ideal = None
+        print("Código de sexo inválido. Por favor, insira 1 para feminino ou 2 para masculino.")
+    return peso_ideal
+
+# Função principal
+def main():
+    altura = float(input("Digite a altura em metros: "))
+    sexo = int(input("Digite o sexo (1 para feminino, 2 para masculino): "))
+
+    peso_ideal = calcular_peso_ideal(altura, sexo)
+
+    if peso_ideal is not None:
+        print(f"O peso ideal é: {peso_ideal:.2f} kg")
+
+# Chamada para a função principal
+if __name__ == "__main__":
+    main()
