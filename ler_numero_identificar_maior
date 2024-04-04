@@ -1,0 +1,35 @@
+# LER DOIS NUMEROS INTEIROS E IDENTIFICAR QUAL É O MAIOR.
+
+# Função para ler um número inteiro
+def ler_numero():
+    while True:
+        try:
+            numero = int(input("Digite um número inteiro: "))
+            return numero
+        except ValueError:
+            print("Por favor, digite apenas números inteiros.")
+
+# Função para comparar dois números e retornar o maior
+def informar_maior(valor1, valor2):
+    if valor1 > valor2:
+        return valor1
+    else:
+        return valor2
+
+# Função principal
+def main():
+    print("Este programa irá informar o maior entre dois números.")
+    
+    # Ler os dois valores
+    valor1 = ler_numero()
+    valor2 = ler_numero()
+    
+    # Encontrar o maior valor
+    maior = informar_maior(valor1, valor2)
+    
+    # Exibir o resultado
+    print("O maior valor é:", maior)
+
+# Chamada para a função principal
+if __name__ == "__main__":
+    main()
