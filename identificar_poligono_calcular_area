@@ -1,0 +1,40 @@
+# IDENTIFICAR O TIPO DE POLIGONO E CALCULAR SUA ÁREA
+
+import math
+
+# Função para calcular a área de um triângulo
+def calcular_area_triangulo(lado):
+    return (math.sqrt(3) / 4) * lado ** 2
+
+# Função para calcular a área de um quadrado
+def calcular_area_quadrado(lado):
+    return lado ** 2
+
+# Função principal
+def main():
+    numero_lados = int(input("Digite o número de lados do polígono regular: "))
+    medida_lado = float(input("Digite a medida do lado (em cm): "))
+
+    if numero_lados == 3:
+        tipo_poligono = "TRIÂNGULO"
+        area = calcular_area_triangulo(medida_lado)
+    elif numero_lados == 4:
+        tipo_poligono = "QUADRADO"
+        area = calcular_area_quadrado(medida_lado)
+    elif numero_lados == 5:
+        tipo_poligono = "PENTÁGONO"
+        area = None
+    elif numero_lados == 5:
+        tipo_poligono = "PENTÁGONO"
+        area = None
+    else:
+        tipo_poligono = "Polígono não suportado"
+        area = None
+
+    print(f"Tipo do polígono: {tipo_poligono}")
+    if area is not None:
+        print(f"Área: {area:.2f} cm²")
+
+# Chamada para a função principal
+if __name__ == "__main__":
+    main()
