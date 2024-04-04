@@ -1,0 +1,21 @@
+# LER NUMEROS INTEIROS E ORDENAR CRESCENTE
+
+# Função principal
+def main():
+    # Ler os 3 valores inteiros
+    valores = []
+    for i in range(3):
+        valor = int(input(f"Digite o {i+1}º valor inteiro: "))
+        valores.append(valor)
+
+    # Ordenar os valores em ordem crescente
+    valores_ordenados = sorted(valores)
+
+    # Escrever os valores em ordem crescente
+    print("Valores em ordem crescente:")
+    for valor in valores_ordenados:
+        print(valor)
+
+# Chamada para a função principal
+if __name__ == "__main__":
+    main()
